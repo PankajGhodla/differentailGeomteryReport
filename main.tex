@@ -1,0 +1,117 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1.2in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{esvect}
+\usepackage{fancyhdr}
+\usepackage{amsthm}
+\usepackage{tikz}
+\usepackage{color}   %May be necessary if you want to colour links
+\usepackage{hyperref}
+\usepackage{lastpage}
+
+\hypersetup{
+    colorlinks=true, %set true if you want colored links
+    linktoc=all,     %set to all if you want both sections and subsections linked
+    linkcolor=blue,  %choose some color if you want links to stand out
+}
+% \pagestyle{plain}
+% \pagestyle{fancy}
+% % \fancyhf{}
+% \cfoot{}
+% \fancyfoot[R]{Page \thepage\ of }
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+
+
+
+% Custom Commands 
+\newcommand{\R}{\mathbb{R}}
+
+
+\title{Differential Geometry of Surfaces}
+\author{Pankaj Ghodla }
+% \date{January 2021}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\newpage
+
+
+\section{Introduction}
+In this section, we will introduce some of the basic definition of curves and surfaces.
+\subsection{Curves}
+Intuitively, A curves can be thought as the trace of a moving particle in the space. Mathematical, a curves is defined to be the image of a function, \( \gamma: U \rightarrow \R^n \), where U \( \subset \R \)..
+
+\begin{definition}[Parametrised curve]
+    A \textbf{parametrised curve} in \( \R^n \) is a smooth function \( \gamma: U \rightarrow \R^n \), where U \( \subset \R \).
+\end{definition}
+Throughout, this report we will assume that smoothness mean \( \text{C}^\infty \), i.e. the function is differentiable infinitely many times.
+
+\begin{definition}[Regular curve]
+    Let \( \gamma: U \rightarrow \R^n \) be a curve. It is called regular if its derivative is non-vanishing, i.e. \( \left\lVert  \gamma^\prime(t) \right\rVert \neq 0 \), \( \forall \in U \).
+\end{definition}
+
+There are many different ways to parametrise a curve, e.g. \( \gamma(t) = (t, t^2)\) and \( \tilde{\gamma}(t) = (t^2, t^4)\). However, only one of these curve is regular, which is \( \gamma(t) \). Moreover, there are many different ways to parametrise a curves such that all the parametrisations are regular.
+
+\begin{definition}[Unit speed curve]
+    Let \( \gamma: U \rightarrow \R^n \) be a curve. It is called unit-speed, if \( \left\lVert  \gamma^\prime(t) \right\rVert = 1 \), \( \forall \in U \).
+\end{definition}
+We will see later on that a lot of the formulas and results relating to curves take on a much simpler form when the curve is unit-speed, e.g. curvature of a unit-speed curve, see definition \ref{definition: Curvature of a curve}, is just the norm of it's second derivative.
+
+\begin{proposition}
+    A parametrised curve is unit-speed if and only if it is regular.
+\end{proposition}
+{\color{red} proof ??}
+
+{\color{red} Explain in more detail why curvature is defined in the following manner: }
+\begin{definition}[Curvature of a curve] \label{definition: Curvature of a curve}
+    Let \( \gamma: U \rightarrow \R^n \) be a unit-speed curve. The curvature at point \( \gamma(t) \) is defined as \[ \kappa(t) = \left\lVert \gamma^{\prime\prime} \right\rVert  \]
+\end{definition}
+
+These are all the definitions and results about curves that we need to know to understand this report.
+\subsection{Surfaces}
+Intuitively, a surface is a subset of \( \R^3 \) that looks like a \( \R^2 \)  in the neighbourhood of any given point, e.g. the surface of the Earth is spherical; however, it appear to be a flat plane(\( \R^2 \)) to an observer on the surface. 
+
+\begin{definition}[Diffeomorphism]
+    if \( f: U \rightarrow W \) is continuous, bijective, and smooth, and if its inverse maps \( f^-1: W \rightarrow U\) is also continuous and smooth, then f is called a diffeomorphism and \(U\) and \(W\) are called diffeomorphic.
+\end{definition}
+
+\begin{definition}[Regular Surface]
+    A subset of \( \R^3 \) is a regular surface, if every point P \( \in S \), there exists a open set \( U \text{ in } \R^2\) and an open set \( W \text{ in } \R^3\) containing P such that \( S \cap W\) is diffeomorphic to \(U\). 
+\end{definition}
+Therefore, a surface is collection of diffeomorphisms, \( \sigma: U \rightarrow S \cap W \), which we call regular surface patches. 
+
+\begin{definition}[Reparametrisation of surface patches]
+    Let \( \sigma: U \rightarrow S\) and \( \tilde{\sigma}: \tilde{U} \rightarrow S\) be surface patches for a surface S, then \( \tilde{\sigma} \) is called a reparametrisation of \( \sigma \) if there exists a map, \( \Phi: \tilde{U} \rightarrow U \), which is smooth and bijective with smooth inverse, \( \Phi^{-1}: U \rightarrow \tilde{U} \).
+\end{definition}
+
+\begin{definition}[Tangent space]
+    Let \(S\) be a regular surface. The \textbf{tangent plane} to \(S\) at the point \( p \in S\) is the set of all initial velocity vectors of regular curves in \(S\) with initial position \(p\), i.e \[ T_pS = \{ \gamma^\prime(0) | \gamma \text{ is a regular curve in S with }\gamma(0) = p\} \]
+\end{definition}
+
+These are all the definitions about surfaces that we need to understand this report.
+
+\section{First Fundamental Form}
+In this section, we will define the one of the most important object that lets us compute lengths, angles and areas on surface. It is called the \textbf{first fundamental form}. 
+
+\begin{definition}[The fundamental form]
+    The \textbf{first fundamental form} is the restriction of the inner product of the ambient space(\(\R^3\)) to the tangent space(\( T_pS\)) at point \( p \in S\).
+\end{definition}
+
+\subsection{The first fundamental form in local coordinates}
+
+
+\end{document}

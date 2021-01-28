@@ -1,0 +1,12 @@
+{
+    // The following will hide the js and map files in the editor
+    "files.exclude": {
+        "**/*": false,
+        "**/*.aux": true,
+        "**/*.log": true,
+        "**/*.fls": true,
+        "**/*.fdb_latexmk": true,
+        "**/*.toc": true,
+        "**/*.gz": true,
+    }
+}
