@@ -29,6 +29,7 @@
 
 \theoremstyle{definition}
 \newtheorem{definition}{Definition}
+\newtheorem{example}{Example}
 
 \theoremstyle{remark}
 \newtheorem{rem}{Remark}
@@ -83,16 +84,16 @@ We will see later on that a lot of the formulas and results relating to curves t
 
 These are all the definitions and results about curves that we need to know to understand this report.
 \subsection{Surfaces}
-Intuitively, a surface is a subset of \( \R^3 \) that looks like a \( \R^2 \)  in the neighbourhood of any given point, e.g. the surface of the Earth is spherical; however, it appear to be a flat plane(\( \R^2 \)) to an observer on the surface. 
+Intuitively, a surface is a subset of \( \R^3 \) that looks like a \( \R^2 \)  in the neighbourhood of any given point, e.g. the surface of the Earth is spherical; however, it appear to be a flat plane(\( \R^2 \)) to an observer on the surface.
 
 \begin{definition}[Diffeomorphism]
-    if \( f: U \rightarrow W \) is continuous, bijective, and smooth, and if its inverse maps \( f^-1: W \rightarrow U\) is also continuous and smooth, then f is called a diffeomorphism and \(U\) and \(W\) are called diffeomorphic.
+    if \( f: U \rightarrow W \) is continuous, bijective, and smooth, and if its inverse maps \( f^{-1}: W \rightarrow U\) is also continuous and smooth, then f is called a diffeomorphism and \(U\) and \(W\) are called diffeomorphic.
 \end{definition}
 
 \begin{definition}[Regular Surface]
-    A subset of \( \R^3 \) is a regular surface, if every point P \( \in S \), there exists a open set \( U \text{ in } \R^2\) and an open set \( W \text{ in } \R^3\) containing P such that \( S \cap W\) is diffeomorphic to \(U\). 
+    A subset of \( \R^3 \) is a regular surface, if every point P \( \in S \), there exists a open set \( U \text{ in } \R^2\) and an open set \( W \text{ in } \R^3\) containing P such that \( S \cap W\) is diffeomorphic to \(U\).
 \end{definition}
-Therefore, a surface is collection of diffeomorphisms, \( \sigma: U \rightarrow S \cap W \), which we call regular surface patches. 
+Therefore, a surface is collection of diffeomorphisms, \( \sigma: U \rightarrow S \cap W \), which we call regular surface patches.
 
 \begin{definition}[Reparametrisation of surface patches]
     Let \( \sigma: U \rightarrow S\) and \( \tilde{\sigma}: \tilde{U} \rightarrow S\) be surface patches for a surface S, then \( \tilde{\sigma} \) is called a reparametrisation of \( \sigma \) if there exists a map, \( \Phi: \tilde{U} \rightarrow U \), which is smooth and bijective with smooth inverse, \( \Phi^{-1}: U \rightarrow \tilde{U} \).
@@ -105,13 +106,99 @@ Therefore, a surface is collection of diffeomorphisms, \( \sigma: U \rightarrow 
 These are all the definitions about surfaces that we need to understand this report.
 
 \section{First Fundamental Form}
-In this section, we will define the one of the most important object that lets us compute lengths, angles and areas on surface. It is called the \textbf{first fundamental form}. 
+In this section, we will define one of the most important object that lets us compute lengths, angles and areas on surface. It is called the \textbf{first fundamental form}.
 
 \begin{definition}[The fundamental form]
     The \textbf{first fundamental form} is the restriction of the inner product of the ambient space(\(\R^3\)) to the tangent space(\( T_pS\)) at point \( p \in S\).
 \end{definition}
 
 \subsection{The first fundamental form in local coordinates}
+We'll now discuss the classical notation for expressing the first fundamental form in local coordinates. Suppose \( \sigma: U \rightarrow S\) is a surface patch and \(\gamma(t): X \rightarrow S\) is a curve on the surface patch of S, defined as \( \gamma(t) = \sigma(u(t),v(t))\). Let \( \gamma(t_0) = p \in S \), then using the chain rule we know that \( \gamma^\prime = \sigma_u u^\prime +  \sigma_v v^\prime\).
+We may then compute:
+\begin{align}
+    \left\langle \gamma^\prime, \gamma^\prime\right\rangle
+     & = \left\langle \sigma_u u^\prime +  \sigma_v v^\prime ,  \sigma_u u^\prime,  \sigma_v v^\prime\right\rangle \nonumber                                                                                                                                                                                                                         \\
+     & = \left\langle \sigma_u u^\prime, \sigma_u u^\prime\right\rangle (u^\prime)^2 + \left\langle \sigma_u u^\prime, \sigma_v v^\prime\right\rangle (u^\prime v^\prime) + \left\langle \sigma_v v^\prime, \sigma_u u^\prime\right\rangle v^\prime u^\prime + \left\langle \sigma_v v^\prime, \sigma_v v^\prime\right\rangle (v^\prime)^2 \nonumber \\
+     & = \left\langle \sigma_u u^\prime, \sigma_u u^\prime\right\rangle (u^\prime)^2 + 2\left\langle \sigma_u u^\prime, \sigma_v v^\prime\right\rangle (u^\prime v^\prime) + \left\langle \sigma_v v^\prime, \sigma_v v^\prime\right\rangle (v^\prime)^2 \nonumber                                                                                   \\
+     & = E(u^\prime)^2 + 2F u^\prime v^\prime + G (v^\prime)^2
+\end{align}
+
+where
+\begin{align}
+    E = \left\lVert \sigma_u \right\rVert ^2, F = \left\lVert \sigma_u \sigma_v\right\rVert ,  G = \left\lVert
+    \sigma_v \right\rVert ^2
+\end{align}
+
+\begin{definition}[the first fundamental form]
+    The first fundamental form in local coordinates(\(u,v\)) is the expression \(\mathcal{F}_1 =  E du^2 + 2F du dv + G dv^2 \).
+\end{definition}
+
+Now, a good question to ask would be, how reparametrisation of a surface affects the first fundamental form of the surface in terms of the local coordinates?
+
+\begin{example}
+    Let \(S\) be a surface. Suppose \(\tilde{\sigma}: \tilde{U} \rightarrow S \) is a reparametrisation of \(\sigma: U \rightarrow S \), where \(\sigma\) is a surface patch of \(S\) and \( U, \tilde{U} \subset \R^2 \).
+    Assume that \( \Phi: \tilde{U} \rightarrow U\) is a smooth map and the following are the first fundamental form of \(\tilde{\sigma}\) and \(\sigma\), respectively:
+    \begin{align*}
+        \tilde{E} d\tilde{u}^2 + 2\tilde{F} d\tilde{u} d\tilde{v} + G d\tilde{v}^2
+        \text{  and  }
+        E du^2 + 2F du dv + G dv^2
+    \end{align*}
+    Then,
+\end{example}
+\begin{align} \label{eq: reparmetrisation affect on the first fundamental form}
+    \begin{pmatrix}
+        \tilde{E} & \tilde{F} \\
+        \tilde{F} & \tilde{G}
+    \end{pmatrix}
+    =
+    J(\Phi)^t
+    \begin{pmatrix}
+        E & F \\
+        F & G
+    \end{pmatrix}
+    J(\Phi)
+\end{align}
+
+, where \( J(\Phi) \) is the Jacobian of \(\Phi\), i.e.
+
+\begin{align*}
+    J(\Phi) =
+    \begin{pmatrix}
+        \frac{\partial u}{ \partial \tilde{u}} &  & \frac{\partial u}{ \partial \tilde{v}} \\
+        \frac{\partial v}{ \partial \tilde{u}} &  & \frac{\partial v}{ \partial \tilde{v}}
+    \end{pmatrix}
+\end{align*}
+
+\begin{proof}[Proof]
+    We know that
+    \( \tilde{\sigma} (\tilde{u}, \tilde{v}) = \sigma(\Phi(\tilde{u}, \tilde{v})) = \sigma(u,v)\) and
+    \( \tilde{E} = \left\lVert \tilde{\sigma}_{\tilde{u}}\right\rVert^2 \text{ , and } E = \left\lVert \sigma_u \right\rVert^2 \). \\
+    Then,
+    \begin{align*}
+        \tilde{E} & = \left\lVert \tilde{\sigma}_{\tilde{u}}\right\rVert^2                                                                                                                                                         \\
+                  & = \left\lVert (\sigma \circ \Phi)_{\tilde{u}}\right\rVert^2                                                                                                                                                    \\
+                  & = \left( \sigma_u \frac{\partial u}{ \partial \tilde{u}} + \sigma_v \frac{\partial v}{ \partial \tilde{u}}\right) ^2                                                                                           \\
+                  & = \sigma_u^2 \frac{\partial u}{ \partial \tilde{u}}^2 + 2\sigma_u \sigma_v \frac{\partial u}{ \partial \tilde{u}} \frac{\partial v}{ \partial \tilde{u}} + \sigma_v^2 \frac{\partial v}{ \partial \tilde{u}}^2 \\
+                  & = E \frac{\partial u}{ \partial \tilde{u}}^2 + 2F \frac{\partial u}{ \partial \tilde{u}} \frac{\partial v}{ \partial \tilde{u}} + G \frac{\partial v}{ \partial \tilde{u}}^2
+    \end{align*}
+    Similarly,
+    \begin{align*}
+        \tilde{G} & = \sigma_u^2 \frac{\partial u}{ \partial \tilde{v}}^2 + 2\sigma_u \sigma_v \frac{\partial u}{ \partial \tilde{v}} \frac{\partial v}{ \partial \tilde{v}} + \sigma_v^2 \frac{\partial v}{ \partial \tilde{v}}^2 \\
+                  & = E \frac{\partial u}{ \partial \tilde{v}}^2 + 2F \frac{\partial u}{ \partial \tilde{v}} \frac{\partial v}{ \partial \tilde{v}} + G \frac{\partial v}{ \partial \tilde{v}}^2                                   \\
+        \tilde{F} & = \sigma_u^2 \frac{\partial u}{ \partial \tilde{u}} \frac{\partial u}{ \partial \tilde{v}} +
+        \sigma_u \sigma_v \frac{\partial u}{ \partial \tilde{u}} \frac{\partial v}{ \partial \tilde{v}} +
+        \sigma_v \sigma_u \frac{\partial v}{ \partial \tilde{u}} \frac{\partial u}{ \partial \tilde{v}} +
+        \sigma_v^2 \frac{\partial v}{ \partial \tilde{u}} \frac{\partial v}{ \partial \tilde{v}}                                                                                                                                   \\
+                  & = E \frac{\partial u}{ \partial \tilde{u}} \frac{\partial u}{ \partial \tilde{v}} +
+        F \frac{\partial u}{ \partial \tilde{u}} \frac{\partial v}{ \partial \tilde{v}} +
+        F \frac{\partial v}{ \partial \tilde{u}} \frac{\partial u}{ \partial \tilde{v}} +
+        G \frac{\partial v}{ \partial \tilde{u}} \frac{\partial v}{ \partial \tilde{v}}
+    \end{align*}
+
+    Therefore, if we write this in a matrix form we would get equation \ref{eq: reparmetrisation affect on the first fundamental form}.
+
+\end{proof}
+
 
 
 \end{document}
