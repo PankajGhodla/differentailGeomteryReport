@@ -3,3 +3,5 @@
 \contentsline {subsection}{\numberline {1.2}Surfaces}{2}{subsection.1.2}%
 \contentsline {section}{\numberline {2}First Fundamental Form}{3}{section.2}%
 \contentsline {subsection}{\numberline {2.1}The first fundamental form in local coordinates}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Length, Angle, and Area}{4}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Second Fundamental Form}{5}{section.3}%

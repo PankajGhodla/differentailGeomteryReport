@@ -108,6 +108,8 @@ These are all the definitions about surfaces that we need to understand this rep
 \section{First Fundamental Form}
 In this section, we will define one of the most important object that lets us compute lengths, angles and areas on surface. It is called the \textbf{first fundamental form}.
 
+{\color{red} Change this definition}
+
 \begin{definition}[The fundamental form]
     The \textbf{first fundamental form} is the restriction of the inner product of the ambient space(\(\R^3\)) to the tangent space(\( T_pS\)) at point \( p \in S\).
 \end{definition}
@@ -198,7 +200,34 @@ Now, a good question to ask would be, how reparametrisation of a surface affects
     Therefore, if we write this in a matrix form we would get equation \ref{eq: reparmetrisation affect on the first fundamental form}.
 
 \end{proof}
+\subsection{Length, Angle, and Area}
+Now, you may be wondering how do we calculate the lengths, angles and areas on the surface as we claimed before. To calculate the length, let \( \gamma: X \rightarrow S \) be a curve on the surface, where \(X \subset \R \). Then,
+\begin{align*}
+    l = \int_{t_0}^{t_1} \left\lVert \gamma(t)\right\rVert dt
+\end{align*}
+\(l\) is the length of the \(\gamma\) from \(t_0\) to \(t_1\), where \( t_0, t_1 \in X\).
+To calculate the angle between two tangent vectors, first we need to represent the inner product on tangent space in terms of the norm of vectors. Let \( x,y \in T_pS\) then,
+\begin{align*}
+    \left\langle x, y\right\rangle = \frac{1}{2}(\left\lVert x\right\rVert^2 + \left\lVert y\right\rVert^2 +\left\lVert x-y \right\rVert  )
+\end{align*}
+Now, we can calculate the angle between two vectors in the tangent plane using the following forma:
+\begin{align*}
+    \left\langle x,y\right\rangle & = \left\lVert x\right\rVert \left\lVert y\right\rVert \text{cos}(\theta)                                                                                                                              \\
+    \therefore \theta             & = \text{cos}^{-1} \left( \frac{\left\langle x,y\right\rangle }{\left\lVert c\right\rVert \left\lVert y\right\rVert } \right)                                                                          \\
+                                  & = \text{cos}^{-1} \left( \frac{\frac{1}{2}(\left\lVert x\right\rVert^2 + \left\lVert y\right\rVert^2 +\left\lVert x-y \right\rVert  ) }{\left\lVert x\right\rVert \left\lVert y\right\rVert } \right)
+\end{align*}
+To calculate the area, we first need to represent the norm of the cross product of \( \sigma_u \) and \( \sigma_v \) in terms of the first fundamental form, where \( u \) and \( v\) are local coordinates.
+\begin{align*}
+    \left\lVert \sigma_u \times \sigma_v \right\rVert & = \sqrt{\left\lvert \sigma_u\right\rvert^2 \left\lvert \sigma_v \right\rvert^2 - \left\langle \sigma_u, \sigma_v \right\rangle } \\
+                                                      & = \sqrt{EG - F^2}
+\end{align*}
 
+Therefore, the area of the region \( \sigma(U) \), where \( U \subset \R^2 \), is :
+\begin{align*}
+    Area(U) & = \iint_U \left\lVert \sigma_u \times \sigma_v \right\rVert dA\\
+            & = \iint_U \sqrt{EG - F^2} dA
+\end{align*}
 
+\section{Second Fundamental Form}
 
 \end{document}
