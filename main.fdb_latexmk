@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1611918948 "/Users/pankajghodla/Latex/SummerResearchProject/main.tex" "/Users/pankajghodla/Latex/SummerResearchProject/main.pdf" "main" 1611918949
-  "/Users/pankajghodla/Latex/SummerResearchProject/main.aux" 1611918949 1849 d8677194cd0d9b0ea72cf6a076536a6f ""
-  "/Users/pankajghodla/Latex/SummerResearchProject/main.tex" 1611918945 14555 595dcbcb89d419c982e670a2f1dfec29 ""
+["pdflatex"] 1612145366 "/Users/pankajghodla/Latex/SummerResearchProject/main.tex" "/Users/pankajghodla/Latex/SummerResearchProject/main.pdf" "main" 1612145368
+  "/Users/pankajghodla/Latex/SummerResearchProject/main.aux" 1612145367 1849 d8677194cd0d9b0ea72cf6a076536a6f ""
+  "/Users/pankajghodla/Latex/SummerResearchProject/main.tex" 1612145365 14951 cfbd77ef2dd110bb18028eb72c57d534 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -170,15 +170,15 @@
   "/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1586288239 4811913 0be9a7e86c70a26e5e3042966bcd7097 ""
   "/usr/local/texlive/2020/texmf-var/web2c/pdftex/pdflatex.fmt" 1610243431 2432462 ee54734073a6bea2200b99b53b402210 ""
   "/usr/local/texlive/2020/texmf.cnf" 1586288231 577 d60164b4589a341208aff7a667fbbdcb ""
-  "main.aux" 1611918949 1849 d8677194cd0d9b0ea72cf6a076536a6f "pdflatex"
-  "main.out" 1611918949 442 a29b7a4291b414decafd78d3737a2b16 "pdflatex"
-  "main.tex" 1611918945 14555 595dcbcb89d419c982e670a2f1dfec29 ""
-  "main.toc" 1611918949 573 9a1aa940464b4421bda4135ba90818e6 "pdflatex"
+  "main.aux" 1612145367 1849 d8677194cd0d9b0ea72cf6a076536a6f "pdflatex"
+  "main.out" 1612145367 442 a29b7a4291b414decafd78d3737a2b16 "pdflatex"
+  "main.tex" 1612145365 14951 cfbd77ef2dd110bb18028eb72c57d534 ""
+  "main.toc" 1612145367 573 9a1aa940464b4421bda4135ba90818e6 "pdflatex"
   (generated)
+  "main.log"
+  "main.toc"
   "/Users/pankajghodla/Latex/SummerResearchProject/main.pdf"
   "/Users/pankajghodla/Latex/SummerResearchProject/main.log"
-  "main.toc"
+  "main.aux"
   "main.pdf"
   "main.out"
-  "main.aux"
-  "main.log"
