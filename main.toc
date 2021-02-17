@@ -6,3 +6,6 @@
 \contentsline {subsection}{\numberline {2.2}Length, Angle, and Area}{4}{subsection.2.2}%
 \contentsline {section}{\numberline {3}Second Fundamental Form}{5}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Normal and Geodesic Curvature}{5}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}The Second Fundamental Form in Local Coordinates}{6}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Gaussian Curvature}{8}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Gauss Curvature in Local Coordinates}{8}{subsection.4.1}%

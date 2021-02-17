@@ -189,6 +189,21 @@ INPUT /usr/local/texlive/2020/texmf-dist/tex/generic/uniquecounter/uniquecounter
 INPUT /usr/local/texlive/2020/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/lastpage/lastpage.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/lastpage/lastpage.sty
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/pifont.sty
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/pifont.sty
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/upzd.fd
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/upzd.fd
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/map/fontname/texfonts.map
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/upsy.fd
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/upsy.fd
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/mathtools/mathtools.sty
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/mathtools/mathtools.sty
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/tools/calc.sty
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/tools/calc.sty
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/mathtools/mhsetup.sty
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/mathtools/mhsetup.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 INPUT /Users/pankajghodla/Latex/SummerResearchProject/main.aux
@@ -214,7 +229,6 @@ OUTPUT /Users/pankajghodla/Latex/SummerResearchProject/main.pdf
 INPUT /Users/pankajghodla/Latex/SummerResearchProject/main.out
 INPUT /Users/pankajghodla/Latex/SummerResearchProject/main.out
 OUTPUT /Users/pankajghodla/Latex/SummerResearchProject/main.out
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/map/fontname/texfonts.map
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
@@ -286,4 +300,6 @@ INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb
