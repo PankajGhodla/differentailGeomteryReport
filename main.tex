@@ -116,7 +116,7 @@ In this section, we will define one of the most important object that lets us co
 \end{definition}
 
 \subsection{The first fundamental form in local coordinates} \label{ssec: The first fundamental form in local coordinates}
-We'll now discuss the classical notation for expressing the first fundamental form in local coordinates. Suppose \( \sigma(u,v): U \rightarrow S\) is a surface patch and \( x,y \in T_pS \), where \(T_pS\) is the tangent plane at point \(p\) on \(S\). Let \( \sigma(u_0, v_0) = p \) and \( f_u = \sigma_u \mid_{u_0} \) and \( f_u = \sigma_v \mid_{v_0} \). Then, we can write \(x =  f_u a + f_v b\) and \( y =  f_u c + f_v d\). This implies the following:
+We'll now discuss the classical notation for expres\text{sin}g the first fundamental form in local coordinates. Suppose \( \sigma(u,v): U \rightarrow S\) is a surface patch and \( x,y \in T_pS \), where \(T_pS\) is the tangent plane at point \(p\) on \(S\). Let \( \sigma(u_0, v_0) = p \) and \( f_u = \sigma_u \mid_{u_0} \) and \( f_u = \sigma_v \mid_{v_0} \). Then, we can write \(x =  f_u a + f_v b\) and \( y =  f_u c + f_v d\). This implies the following:
 \begin{align}
     \begin{split}
         \mathbf{I}(x,y) & = \mathbf{I}( f_u a + f_v b,  f_u c + f_v d) \\
@@ -126,7 +126,7 @@ We'll now discuss the classical notation for expressing the first fundamental fo
     \end{split}
 \end{align}
 
-% Suppose \( \sigma: U \rightarrow S\) is a surface patch and \(\gamma(t): X \rightarrow S\) is a curve on the surface patch of S, defined as \( \gamma(t) = \sigma(u(t),v(t))\). Let \( \gamma(t_0) = p \in S \), then using the chain rule we know that \( \gamma^\prime = \sigma_u u^\prime +  \sigma_v v^\prime\).
+% Suppose \( \sigma: U \rightarrow S\) is a surface patch and \(\gamma(t): X \rightarrow S\) is a curve on the surface patch of S, defined as \( \gamma(t) = \sigma(u(t),v(t))\). Let \( \gamma(t_0) = p \in S \), then u\text{sin}g the chain rule we know that \( \gamma^\prime = \sigma_u u^\prime +  \sigma_v v^\prime\).
 % We may then compute:
 % \begin{align}
 %     \left\langle \gamma^\prime, \gamma^\prime\right\rangle
@@ -217,19 +217,19 @@ Now, you may be wondering how do we calculate the lengths, angles and areas on t
     l = \int_{t_0}^{t_1} \left\lVert \gamma(t)\right\rVert dt
 \end{align*}
 \(l\) is the length of the \(\gamma\) from \(t_0\) to \(t_1\), where \( t_0, t_1 \in X\).
-To calculate the angle between two tangent vectors, we can use the definition of inner product, i.e. \( \left\langle x, y\right\rangle = cos(\theta) \left\lVert x \right\rVert \left\lVert y \right\rVert  \), where \(\theta\) is the angle between the tangent vectors. Therefore,
+To calculate the angle between two tangent vectors, we can use the definition of inner product, i.e. \( \left\langle x, y\right\rangle = \text{cos}(\theta) \left\lVert x \right\rVert \left\lVert y \right\rVert  \), where \(\theta\) is the angle between the tangent vectors. Therefore,
 \begin{align*}
-    \theta = cos^{-1} \left(  \frac{\left\langle x, y\right\rangle }{\left\lVert x \right\rVert \left\lVert y \right\rVert } \right)
+    \theta = \text{cos}^{-1} \left(  \frac{\left\langle x, y\right\rangle }{\left\lVert x \right\rVert \left\lVert y \right\rVert } \right)
 \end{align*}
 % first we need to represent the inner product on tangent space in terms of the norm of vectors. Let \( x,y \in T_pS\) then,
 % \begin{align*}
 %     \left\langle x, y\right\rangle = \frac{1}{2}(\left\lVert x\right\rVert^2 + \left\lVert y\right\rVert^2 +\left\lVert x-y \right\rVert  )
 % \end{align*}
-% Now, we can calculate the angle between two vectors in the tangent plane using the following forma:
+% Now, we can calculate the angle between two vectors in the tangent plane u\text{sin}g the following forma:
 % \begin{align*}
-%     \left\langle x,y\right\rangle & = \left\lVert x\right\rVert \left\lVert y\right\rVert \text{cos}(\theta)                                                                                                                              \\
-%     \therefore \theta             & = \text{cos}^{-1} \left( \frac{\left\langle x,y\right\rangle }{\left\lVert c\right\rVert \left\lVert y\right\rVert } \right)                                                                          \\
-%                                   & = \text{cos}^{-1} \left( \frac{\frac{1}{2}(\left\lVert x\right\rVert^2 + \left\lVert y\right\rVert^2 +\left\lVert x-y \right\rVert  ) }{\left\lVert x\right\rVert \left\lVert y\right\rVert } \right)
+%     \left\langle x,y\right\rangle & = \left\lVert x\right\rVert \left\lVert y\right\rVert \text{\text{cos}}(\theta)                                                                                                                              \\
+%     \therefore \theta             & = \text{\text{cos}}^{-1} \left( \frac{\left\langle x,y\right\rangle }{\left\lVert c\right\rVert \left\lVert y\right\rVert } \right)                                                                          \\
+%                                   & = \text{\text{cos}}^{-1} \left( \frac{\frac{1}{2}(\left\lVert x\right\rVert^2 + \left\lVert y\right\rVert^2 +\left\lVert x-y \right\rVert  ) }{\left\lVert x\right\rVert \left\lVert y\right\rVert } \right)
 % \end{align*}
 To calculate the area, we first need to represent the norm of the cross product of \( \sigma_u \) and \( \sigma_v \) in terms of the first fundamental form, where \( u \) and \( v\) are local coordinates.
 \begin{align*}
@@ -316,7 +316,7 @@ We'll now talk about the second fundamental form in local coordinates as we did 
     \end{split}
 \end{align}
 
-These equations are generated using a similar method to what we did in equation \ref{eq: relating two interpretaion of the normal curvature}. Note that we have suppressed the input variables for brevity. For example, the red term really means that \( L(q) = \left\langle W_{p}(\sigma_u(q)), \sigma_u(q)\right\rangle \), where \(p = \sigma(q)\) and \(q \in U \subset \R^2\). Furthermore, we can represent the second fundamental form in terms of \(E, F, \text{ and } G\) as follows:\\
+These equations are generated u\text{sin}g a similar method to what we did in equation \ref{eq: relating two interpretaion of the normal curvature}. Note that we have suppressed the input variables for brevity. For example, the red term really means that \( L(q) = \left\langle W_{p}(\sigma_u(q)), \sigma_u(q)\right\rangle \), where \(p = \sigma(q)\) and \(q \in U \subset \R^2\). Furthermore, we can represent the second fundamental form in terms of \(E, F, \text{ and } G\) as follows:\\
 Suppose \( v \in T_pS\) and \( p \in S\) then,
 \begin{align*}
     \mathbf{II}_p(v) & = \mathbf{II}_p(a\sigma_u + b\sigma) = \left\langle W_p(a\sigma_u + b\sigma), a\sigma_u + b\sigma \right\rangle                                                        \\
@@ -360,7 +360,7 @@ As we did in the section \ref{ssec: The first fundamental form in local coordina
     This is because \( N\cdot\sigma_u = N\cdot\sigma_v = 0\). Similarly, we can calculate \(\tilde{M} \) and \(\tilde{N}\) in terms of \(N, M, \text{ and } N\). Then as in example \ref{eg: reparmetrisation affect on the first fundamental form} if we represent it in terms of matrices, then we will get the desired result.
 \end{proof}
 
-% The normal and geodesic curvature are extrinsic porosities. This means that we can't represent them using only the first fundamental form.
+% The normal and geodesic curvature are extrinsic porosities. This means that we can't represent them u\text{sin}g only the first fundamental form.
 
 \section{Gaussian Curvature}
 In this section, we'll define two more quantities that measures the curvature of a surface, namely the Gaussian Curvature and Mean Curvature. Gaussian and Mean curvature are dependent on the the following definition:
@@ -370,12 +370,12 @@ In this section, we'll define two more quantities that measures the curvature of
     Alternatively, the max and min curvature are the eigen values of the Weingarten map \( W_p\) at point \(p \in S\) and the principal direction associated with them are the eigen vectors.
 \end{definition}
 
-From the above definition, we can see that we can represent the Weingarten map as a diagonal matrix with a change of basis. Suppose \(v \in T_pS\), where \(|v| = 1\), and let be orthonormal basis be  \( e_1 \) and \( e_2 \) of \( T_pS\). Then, we can represent in \(v\) terms of the basis vectors, i.e. \( v = e_1 cos(\theta) + e_2 sin(\theta)\), where \( \theta \) is the angle between \( v\) and \( e_1\).
+From the above definition, we can see that we can represent the Weingarten map as a diagonal matrix with a change of basis. Suppose \(v \in T_pS\), where \(|v| = 1\), and let be orthonormal basis be  \( e_1 \) and \( e_2 \) of \( T_pS\). Then, we can represent in \(v\) terms of the basis vectors, i.e. \( v = e_1 \text{cos}(\theta) + e_2 \text{sin}(\theta)\), where \( \theta \) is the angle between \( v\) and \( e_1\).
 \begin{align*}
     \mathbf{II}_p(v) & = \left\langle W_p(v), v\right\rangle                                                                              \\
-                     & = \left\langle W_p(e_1 cos(\theta) + e_2 sin(\theta)), e_1 cos(\theta) + e_2 sin(\theta) \right\rangle             \\
-                     & = \left\langle e_1 \kappa_1 cos(\theta) + e_2 \kappa_2 sin(\theta), e_1 cos(\theta) + e_2 sin(\theta)\right\rangle \\
-                     & = \kappa_1 cos(\theta)^2 + \kappa_2 sin(\theta)^2
+                     & = \left\langle W_p(e_1 \text{cos}(\theta) + e_2 \text{sin}(\theta)), e_1 \text{cos}(\theta) + e_2 \text{sin}(\theta) \right\rangle             \\
+                     & = \left\langle e_1 \kappa_1 \text{cos}(\theta) + e_2 \kappa_2 \text{sin}(\theta), e_1 \text{cos}(\theta) + e_2 \text{sin}(\theta)\right\rangle \\
+                     & = \kappa_1 \text{cos}(\theta)^2 + \kappa_2 \text{sin}(\theta)^2
 \end{align*}
 
 Therefore, if we represent the Weingarten map with respect to the above orthonormal basis then Weingarten map would be:
@@ -395,7 +395,7 @@ We can use equation \ref{eq: Weingarten map diagonal matrix} to write the Gaussi
     K = det(W) = \kappa_1\kappa_2 && H = \frac{1}{2} \text{trace}(W) = \frac{\kappa_1 + \kappa_2 }{2}
 \end{align*}
 \subsection{Gauss Curvature in Local Coordinates}
-Now, we will define Gaussian curvature with respect to the local coordinates using the following proposition:
+Now, we will define Gaussian curvature with respect to the local coordinates u\text{sin}g the following proposition:
 \begin{proposition}
     Let \( \begin{pmatrix}
         w_{11} & w_{21} \\
@@ -413,7 +413,7 @@ Now, we will define Gaussian curvature with respect to the local coordinates usi
     \end{align}
 \end{proposition}
 \begin{proof}
-    Using equation \ref{eq: define second fundamental form in local coordinates} we get the following:
+    U\text{sin}g equation \ref{eg: define second fundamental form in local coordinates} we get the following:
     \begin{align*}
         L & = \left\langle W_p(\sigma_u), \sigma_u \right\rangle = \left\langle w_{11}\sigma_u + w_{21}\sigma_v, \sigma_u\right\rangle = w_{11}E + w_{21}F \\
         M & = \left\langle W_p(\sigma_u), \sigma_v \right\rangle =  \left\langle w_{11}\sigma_u + w_{21}\sigma_v, \sigma_v\right\rangle = w_{11}E + w_{21}G  \\
@@ -452,32 +452,32 @@ From this we can get a formula for the Gaussian and Mean curvature in terms the 
 
 In order to fully understand these concepts, we'll consider the following examples:
 
-\begin{example}
-    In this example, we'll calculate the Gaussian curvature for a general surface of revolution. A surface of revolution is obtained by rotating a plane curve, called the profile curve, around a straight line in the plane. Suppose \( \gamma(u) = (f(u),0,g(u))\) is a parametrisation of a profile curve in the \{x, z\} plane and let \( \sigma(u,v) = (cos(v)f(u), sin(v)f(u), g(u) )\) be the surface obtained by rotating the profile around the \(z\) axis. Then, 
+\begin{example} \label{eg: Gaussian curvature of surface of revolution}
+    In this example, we'll calculate the Gaussian curvature for a general surface of revolution. A surface of revolution is obtained by rotating a plane curve, called the profile curve, around a straight line in the plane. Suppose \( \gamma(u) = (f(u),0,g(u))\) is a parametrisation of a profile curve in the \{x, z\} plane and let \( \sigma(u,v) = (\text{cos}(v)f(u), \text{sin}(v)f(u), g(u) )\) be the surface obtained by rotating the profile around the \(z\) axis. Then, 
     \begin{align*}
-        \sigma_u & = (cos(v)f^{\prime}, sin(v)f^{\prime}, g^{\prime} ) \\
-        \sigma_v & = (-sin(v)f, cos(v)f, 0) \\
-        \therefore \; \; & \sigma_u \times \sigma_v = (-cos(v)fg^{\prime} , -sin(v)fg^{\prime}, f^{\prime} f) \\
+        \sigma_u & = (\text{cos}(v)f^{\prime}, \text{sin}(v)f^{\prime}, g^{\prime} ) \\
+        \sigma_v & = (-\text{sin}(v)f, \text{cos}(v)f, 0) \\
+        \therefore \; \; & \sigma_u \times \sigma_v = (-\text{cos}(v)fg^{\prime} , -\text{sin}(v)fg^{\prime}, f^{\prime} f) \\
         \therefore \; \; &  \left\lVert\sigma_u \times \sigma_v \right\rVert = \sqrt{(fg^{\prime})^2 + (ff^{\prime})^2} = \sqrt{f^2((g^{\prime})^2 + (f^{\prime})^2)}
     \end{align*} 
     Therefore, \( \left\lVert\sigma_u \times \sigma_v \right\rVert \) will be non-vanishing if \( f \) is never \(0\), this means the profile curve never intersect the z axis, and \(  (g^{\prime})^2 + (f^{\prime})^2 \neq 0 \), this means the profile curve is regular. We know if a curve is regular, then there exists a reparametrisation of this curve such that its reparametrisation is unit speed; therefore, we might as well assume that the profile curve is unit-speed. \\
     To calculate the Gaussian curvature, we must first calculate the first and the second fundamental form in terms of the local coordinates. \\
     The first fundamental form in local coordinates: 
     \begin{align*}
-        E & = \left\langle \sigma_u , \sigma_u\right\rangle  = \left\lVert (cos(v)f^{\prime}, sin(v)f^{\prime}, g^{\prime} ) \right\rVert^2 = (f^{\prime})^2 + (g^{\prime})^2  = 1 \\
-        F & = \left\langle \sigma_u, \sigma_v \right\rangle = \left\langle (cos(v)f^{\prime}, sin(v)f^{\prime}, g^{\prime} ), (-sin(v)f, cos(v)f, 0 ) \right\rangle = 0 \\
-        G & = \left\langle \sigma_v, \sigma_v \right\rangle  = \left\lVert (-sin(v)f, cos(v)f, 0) \right\rVert ^2 = f^2
+        E & = \left\langle \sigma_u , \sigma_u\right\rangle  = \left\lVert (\text{cos}(v)f^{\prime}, \text{sin}(v)f^{\prime}, g^{\prime} ) \right\rVert^2 = (f^{\prime})^2 + (g^{\prime})^2  = 1 \\
+        F & = \left\langle \sigma_u, \sigma_v \right\rangle = \left\langle (\text{cos}(v)f^{\prime}, \text{sin}(v)f^{\prime}, g^{\prime} ), (-\text{sin}(v)f, \text{cos}(v)f, 0 ) \right\rangle = 0 \\
+        G & = \left\langle \sigma_v, \sigma_v \right\rangle  = \left\lVert (-\text{sin}(v)f, \text{cos}(v)f, 0) \right\rVert ^2 = f^2
     \end{align*}
     The Gaussian Map in local coordinates:
     \begin{align*}
-        N = \frac{\sigma_u \times \sigma_v }{\left\lVert \sigma_u \times \sigma_v \right\rVert } & =  \frac{\left( -cos(v)g^{\prime}f, -sin(v)g^{\prime}f, ff^{\prime} )\right)}{f} \text{  (  because  \((f^{\prime})^2 + (g^{\prime})^2  = 1  ) \)} \\ 
-        & = \left( -cos(v)g^{\prime}, -sin(v)g^{\prime}, f^{\prime} \right)
+        N = \frac{\sigma_u \times \sigma_v }{\left\lVert \sigma_u \times \sigma_v \right\rVert } & =  \frac{\left( -\text{cos}(v)g^{\prime}f, -\text{sin}(v)g^{\prime}f, ff^{\prime} )\right)}{f} \text{  (  because  \((f^{\prime})^2 + (g^{\prime})^2  = 1  ) \)} \\ 
+        & = \left( -\text{cos}(v)g^{\prime}, -\text{sin}(v)g^{\prime}, f^{\prime} \right)
     \end{align*}
     The second fundamental form in local coordinates:
     \begin{align*}
-        \sigma_{uu} & = (cos(v)f^{\prime \prime}, sin(v)f^{\prime \prime}, g^{\prime \prime}) \\
-        \sigma_{uv} & = (-sin(v)f^{\prime}, cos(v)f^{\prime}, 0) \\
-        \sigma_{vv} & = (-cos(v)f, -sin(v)f, 0 ) \\
+        \sigma_{uu} & = (\text{cos}(v)f^{\prime \prime}, \text{sin}(v)f^{\prime \prime}, g^{\prime \prime}) \\
+        \sigma_{uv} & = (-\text{sin}(v)f^{\prime}, \text{cos}(v)f^{\prime}, 0) \\
+        \sigma_{vv} & = (-\text{cos}(v)f, -\text{sin}(v)f, 0 ) \\
         \therefore \; \; \; \; L & = \left\langle \sigma_{uu}, N \right\rangle = g^{\prime \prime}f^{\prime} -  f^{\prime \prime} g^{\prime}\\
         M & = \left\langle \sigma_{uv} , N \right\rangle = 0 \\
         N & = \left\langle \sigma_{vv} , N \right\rangle = fg^{\prime} 
@@ -498,17 +498,87 @@ In order to fully understand these concepts, we'll consider the following exampl
      \end{align*}
 \end{example}
 
-Now, a good question to ask would be that if the Gaussian curvature is given can we find a surface that has the given Gaussian curvature? For simplicity, we will assume that the Gaussian curvature is constant for the entire surface; however, before we do this example, we need to consider the following example:
+Now, a good question to ask would be that if the Gaussian curvature is given can we find a surface that has the given Gaussian curvature? For simplicity, we will assume that the Gaussian curvature is constant for the entire surface; however, before we do this, we need to consider the following example:
 
 \begin{example}
-    
+    Show that when we apply a dilation \( (x,y,z) \rightarrow a(x,y,z) \), where \(a\) is a non-zero constant, on a surface its Gaussian curvature gets multiplied by \(a^{-2}\).
+\end{example}
+\begin{proof}
+    Suppose \( S \) is a surface and \(\sigma: U \rightarrow S \) is a surface patch of \(S\). Let \(K\) be the Gaussian curvature of S, \( \tilde{\sigma} = a\sigma \) and let \( Fdu^2 + 2Gdudv + Hdv^2 \) be the first fundamental form and \( Ldu^2 + 2Mdudv + Ndv^2 \) be the second fundamental form of \(S\). \\
+    Then the first fundamental form of \( \tilde{\sigma}\) is :
+    \begin{align*}
+        \tilde{E} & = \left\langle \tilde{\sigma}_u, \tilde{\sigma}_u \right\rangle = \left\langle a\sigma_u, a\sigma_u \right\rangle = a^2 \left\langle \sigma_u, \sigma_u \right\rangle = a^2 E \\
+        \tilde{F} & = \left\langle \tilde{\sigma}_u, \tilde{\sigma}_v \right\rangle = \left\langle a \sigma_u, a \sigma_v \right\rangle = a^2 \left\langle \sigma_u, \sigma_v \right\rangle = a^2 F \\
+        \tilde{G} & = \left\langle \tilde{\sigma}_v, \tilde{\sigma}_v \right\rangle = \left\langle a\sigma_v, a\sigma_v \right\rangle = a^2 \left\langle \sigma_v, \sigma_v \right\rangle = a^2 G 
+    \end{align*}
+    The Normal of \( \tilde{\sigma}\) is: 
+    \begin{align*}
+        \tilde{N} = \frac{\tilde{\sigma}_u \times  \tilde{\sigma}_v}{\left\lVert \tilde{\sigma}_u \times  \tilde{\sigma}_v\right\rVert } = \frac{a^2 (\sigma_u \times \sigma_v) }{ \left\lVert a^2 (\sigma_u \times \sigma_v) \right\rVert } = N
+    \end{align*}
+    The second fundamental form of \( \tilde{\sigma}\) is:
+        \begin{align*}
+            \tilde{L} & = \left\langle \tilde{\sigma}_{uu}, \tilde{N} \right\rangle = \left\langle a \sigma_{uu}, N \right\rangle = aL \\
+            \tilde{M} & = \left\langle \tilde{\sigma}_{uv}, \tilde{N} \right\rangle = \left\langle a \sigma_{uv}, N \right\rangle = aM \\
+            \tilde{N} & = \left\langle \tilde{\sigma}_{vv}, \tilde{N} \right\rangle = \left\langle a \sigma_{vv}, N \right\rangle = aN 
+        \end{align*}
+        Therefore, the Gaussian curvature of the surface after dilation is:
+        \begin{align*}
+            \tilde{K} = \frac{\tilde{L}\tilde{N} - \tilde{M}^2}{\tilde{E}\tilde{G}-\tilde{F}^2} = \frac{a^2 (LN-M^2) }{ a^4( EG-F^2)} = \frac{K}{a^2}
+        \end{align*}
+\end{proof}
+From the above example, we can tell that we only need to consider 3 cases, when the Gaussian curvature is -1, 0, and 1. This is because we can get all the other Gaussian curvatures by just a dilation of the surface.
+
+\begin{example}
+    Suppose that the given Gaussian curvature is -1. Then, u\text{sin}g the same format as in example \ref{eg: Gaussian curvature of surface of revolution}, we know that \( -1 = \frac{-f^{\prime \prime}}{f}\), i.e. \( f = f^{\prime \prime} \). Then, the general solution is \( f(u) = ae^u + be^{-u}\), where \( a,b \in \R \). For simplicity, let \( f(u) = e^u \) then,
+    \begin{align*}
+        & (f^\prime)^2 + (g^\prime)^2 = 1 \implies g^\prime = \pm \sqrt{1-(f^\prime)^2} = \pm \sqrt{1-e^{2u}}
+        \shortintertext{This implies}
+        g(u) & = \int \sqrt{1-e^{2u}} du = \sqrt{1-e^{2u}} - \text{\text{cos}h}^{-1}(e^{-u}) 
+    \end{align*}
+    The evaluation of this integral has been left as an exercise for the reader. We dropped the \( \pm\) sign as we are only looking for one possible surface. Therefore, a surface with Gaussian curvature -1 is 
+    \begin{align*}
+        \sigma(u,v) & = (\text{cos}(v)f(u), \text{sin}(v)f(u), g(u)) \\
+         & = (\text{cos}(v) e^u, \text{sin}(v) e^u , \sqrt{1-e^{2u}} - \text{\text{cos}h}^{-1}(e^{-u})  )
+    \end{align*}
+    If we were to consider the general case then the general function would be the following:
+    \begin{align*}
+        \sigma(u,v) = \left(\text{cos}(v) (ae^u + be^{-u}), \text{sin}(v) (ae^u + be^{-u}), \int \pm \sqrt{1-(ae^u - be^{-u})^2} \right) 
+    \end{align*}
 \end{example}
 
+\begin{example}
+    Suppose that the given Gaussian curvature is 0. Then, using the same format as in example \ref{eg: Gaussian curvature of surface of revolution}, we know \( 0 = \frac{-f^{\prime \prime}}{f} \), i.e. \( f^{\prime \prime} = 0\). This implies that \( f(u) = au \),  where \( a \in \R \). Then,
+    \begin{align*}
+        (f^\prime)^2 + (g^\prime)^2 = 1 \implies g^\prime = \pm \sqrt{1-(f^\prime)^2} = \pm \sqrt{1 - a^2}
+        \shortintertext{Therefore, }
+        g = \pm \int \sqrt{1 - a^2} du = \pm (\sqrt{1 - a^2})u + c \\
+        \shortintertext{Hence, }
+        \sigma(u,v) = (a \; \text{cos}(v)u, a \; \text{sin}(v) u, bu + c)
+        \shortintertext{, where \(b = \pm \sqrt{1 - a^2} \)}
+    \end{align*}
+\end{example}
+\begin{example}
+    Suppose the given Gaussian curvature is 1. Then, using the same formula as in example \ref{eg: Gaussian curvature of surface of revolution}, we know \( 1 = \frac{-f^{\prime \prime}}{f} \), i.e. \( f = -f^{\prime \prime }\). Then, the general solution is \( f(u) =  a \; \text{sin}(u) + b \; \text{cos}(u) \), where \( a,b \in \R \). Then,
+
+    \begin{align*}
+        (f^\prime)^2 + (g^\prime)^2 & = 1 \implies g^\prime = \pm \sqrt{1-(f^\prime)^2} = \pm \sqrt{1 - (a \; \text{cos}(u) - b \; \text{sin}(u) )^2 } \\
+        \shortintertext{This implies }
+        g(u) & = \pm \int \sqrt{1 - (a \; \text{cos}(u) - b \; \text{sin}(u))^2  }
+    \end{align*}
+    For simplicity, lets assume that \( f(u) = \text{sin}(u)\) and \( g(u) = \int \sqrt{1 - (\text{cos}(u))^2 } = \int \text{sin(}u) du = cos(u) + c\). Therefore, a surface with Gaussian calculate 1 is
+    \begin{align*}
+        \sigma(u,v) =  ( \text{cos}(v)\text{sin}(u), \text{sin}(v) \text{sin}(u), \text{cos}(u))
+    \end{align*}
+    , which is a unit sphere. If we were to consider the general case then the general function would be the following:
+    \begin{align*}
+        \sigma(u,v) = \left(\text{cos}(v) ( a \; \text{sin}(u) + b \; \text{cos}(u) ) , \text{sin}(v) ( a \; \text{sin}(u) + b \; \text{cos}(u)) , \pm \int \sqrt{1 - (a \; \text{cos}(u) - b \; \text{sin}(u))^2  }  \right)
+    \end{align*}
+\end{example}
 
     {\color{red}
         - Example \checkmark \\
         - Gaussian Curvature , Give the formula show what gaussian curves is equal to w.r.t. the first and second fundamental form. \checkmark\\
-        - Example that Pedram asked \\
+        - Example that Pedram asked \checkmark \\
         - Gauss Bonnet Theorem \ding{55}}
         \end{document}
 
