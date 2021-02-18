@@ -43,15 +43,31 @@
 \newcommand{\R}{\mathbb{R}}
 
 
-\title{Differential Geometry of Surfaces}
-\author{Pankaj Ghodla }
-% \date{January 2021}
-
+\title{ \textbf{ Differential Geometry of Curve and Surfaces}}
+\author{Student: Pankaj Ghodla \\ {Supervisor: Pedram Hekmati} \\ {Mathematics Department, the University of Auckland} \\ Degree Programme: BSc, the University of Auckland}
+\date{}
 \begin{document}
 \maketitle
-\tableofcontents
+
+\subsection*{Career Development}
+% Include a brief statement on how the scholarship has furthered their career
+% development.
+% - talk about exposure \\
+% - talk about how this scholarship has help me how research in academics is done \\
+% - talk about how Pedram told me what I should be doing next.
+% - This scholarship has motivated to me to keep pursuing mathematics
+
+The University of Auckland summer research scholarship has provided me precious insight into the world of academics and motivated me to pursue mathematics further. My supervisor, Pedram Hekmati, has not only exposed me to many new concepts in mathematics, particularly in the area of Differential Geometry of Curves and Surfaces, but also provided me with valuable resources that will help me to ultimately work in Riemannian Geometry in n-dimensions. During the summer research scholarship, I got the opportunity to interact with other like-minded students who were also excited about mathematics. This exposed me to a greater area of mathematics as they encouraged me to understand their topics. 
+
+\subsection*{Research Summary}
+Differential Geometry is the study of geometric figures using the methods of Calculus. This means we apply methods like differentiation and integration on the geometric figures in the hope of learning their properties. We can view geometric figures in two ways; they can be imagined as being embedded in \(\R^n\) or simply considering a geometric figure as a topological space by itself. In this report, we focus on the view in which geometric figures are embedded in \( \R^n \). This field of study is called Riemannian Geometry. Partially, we study their properties by embedding them in \( \R^3 \). The downside of studying geometric figures by embedding them in \( \R^3 \), or even in \( \R^n \), is that we need to prove certain things are invariant under different embeddings. However, embedding a geometry figure in \( \R^3 \) gives us a lot of structure to work with, and this makes analysing them not very different from the classical analysis of functions in \(\R^3\). This report explores many different properties of smooth surfaces, which are special types of geometric figures, by using multi-variable Calculus.
+
+\subsection*{Abstract}
+In this report, we mainly explore the properties of smooth surface in \( \R^3 \). We develop an intuitive and mathematical understanding of the first and second fundamental forms. We acquire an understanding of the Normal, Geodesic, and Gaussian curvature through mathematical formulation and examples.
 
 \newpage
+
+\tableofcontents
 
 
 \section{Introduction}
@@ -90,11 +106,11 @@ These are all the definitions and results about curves that we need to know to u
 Intuitively, a surface is a subset of \( \R^3 \) that looks like a \( \R^2 \)  in the neighbourhood of any given point, e.g. the surface of the Earth is spherical; however, it appear to be a flat plane(\( \R^2 \)) to an observer on the surface.
 
 \begin{definition}[Diffeomorphism]
-    if \( f: U \rightarrow W \) is continuous, bijective, and smooth, and if its inverse maps \( f^{-1}: W \rightarrow U\) is also continuous and smooth, then f is called a diffeomorphism and \(U\) and \(W\) are called diffeomorphic.
+    If \( f: U \rightarrow W \) is continuous, bijective, and smooth, and if its inverse maps \( f^{-1}: W \rightarrow U\) is also continuous and smooth, then f is called a diffeomorphism, and \(U\) and \(W\) are called diffeomorphic.
 \end{definition}
 
 \begin{definition}[Regular Surface]
-    A subset of \( \R^3 \) is a regular surface, if every point P \( \in S \), there exists a open set \( U \text{ in } \R^2\) and an open set \( W \text{ in } \R^3\) containing P such that \( S \cap W\) is diffeomorphic to \(U\).
+    A subset of \( \R^3 \) is a regular surface, if for every point P \( \in S \), there exists a open set \( U \text{ in } \R^2\) and an open set \( W \text{ in } \R^3\) containing P such that \( S \cap W\) is diffeomorphic to \(U\).
 \end{definition}
 Therefore, a surface is collection of diffeomorphisms, \( \sigma: U \rightarrow S \cap W \), which we call regular surface patches.
 
@@ -413,7 +429,7 @@ Now, we will define Gaussian curvature with respect to the local coordinates u\t
     \end{align}
 \end{proposition}
 \begin{proof}
-    U\text{sin}g equation \ref{eg: define second fundamental form in local coordinates} we get the following:
+    Using equation \ref{eq: define second fundamental form in local coordinates} we get the following:
     \begin{align*}
         L & = \left\langle W_p(\sigma_u), \sigma_u \right\rangle = \left\langle w_{11}\sigma_u + w_{21}\sigma_v, \sigma_u\right\rangle = w_{11}E + w_{21}F \\
         M & = \left\langle W_p(\sigma_u), \sigma_v \right\rangle =  \left\langle w_{11}\sigma_u + w_{21}\sigma_v, \sigma_v\right\rangle = w_{11}E + w_{21}G  \\
@@ -457,8 +473,8 @@ In order to fully understand these concepts, we'll consider the following exampl
     \begin{align*}
         \sigma_u & = (\text{cos}(v)f^{\prime}, \text{sin}(v)f^{\prime}, g^{\prime} ) \\
         \sigma_v & = (-\text{sin}(v)f, \text{cos}(v)f, 0) \\
-        \therefore \; \; & \sigma_u \times \sigma_v = (-\text{cos}(v)fg^{\prime} , -\text{sin}(v)fg^{\prime}, f^{\prime} f) \\
-        \therefore \; \; &  \left\lVert\sigma_u \times \sigma_v \right\rVert = \sqrt{(fg^{\prime})^2 + (ff^{\prime})^2} = \sqrt{f^2((g^{\prime})^2 + (f^{\prime})^2)}
+        \therefore \; \; \sigma_u \times \sigma_v & = (-\text{cos}(v)fg^{\prime} , -\text{sin}(v)fg^{\prime}, f^{\prime} f) \\
+        \therefore \; \; \left\lVert\sigma_u \times \sigma_v \right\rVert & = \sqrt{(fg^{\prime})^2 + (ff^{\prime})^2} = \sqrt{f^2((g^{\prime})^2 + (f^{\prime})^2)}
     \end{align*} 
     Therefore, \( \left\lVert\sigma_u \times \sigma_v \right\rVert \) will be non-vanishing if \( f \) is never \(0\), this means the profile curve never intersect the z axis, and \(  (g^{\prime})^2 + (f^{\prime})^2 \neq 0 \), this means the profile curve is regular. We know if a curve is regular, then there exists a reparametrisation of this curve such that its reparametrisation is unit speed; therefore, we might as well assume that the profile curve is unit-speed. \\
     To calculate the Gaussian curvature, we must first calculate the first and the second fundamental form in terms of the local coordinates. \\
