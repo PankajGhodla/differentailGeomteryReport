@@ -84,7 +84,7 @@ Throughout, this report we will assume that smoothness mean \( \text{C}^\infty \
     Let \( \gamma: U \rightarrow \R^n \) be a curve. It is called regular if its derivative is non-vanishing, i.e. \( \left\lVert  \gamma^\prime(t) \right\rVert \neq 0 \), \( \forall \in U \).
 \end{definition}
 
-There are many different ways to parametrise a curve, e.g. \( \gamma(t) = (t, t^2)\) and \( \tilde{\gamma}(t) = (t^2, t^4)\). However, only one of these curve is regular, which is \( \gamma(t) \). Moreover, there are many different ways to parametrise a curves such that all the parametrisations are regular.
+There are many different ways to parametrise a curve, e.g. \( \gamma(t) = (t, t^2)\) and \( \tilde{\gamma}(t) = (t^2, t^4)\) describes the same curve. However, only one of these curve is regular, which is \( \gamma(t) \). Moreover, there are many different ways to parametrise a curve such that all the parametrisations are regular.
 
 \begin{definition}[Unit speed curve]
     Let \( \gamma: U \rightarrow \R^n \) be a curve. It is called unit-speed, if \( \left\lVert  \gamma^\prime(t) \right\rVert = 1 \), \( \forall \in U \).
@@ -94,44 +94,43 @@ We will see later on that a lot of the formulas and results relating to curves t
 \begin{proposition}
     A parametrised curve is unit-speed if and only if it is regular.
 \end{proposition}
-{\color{red} proof ??}
 
-{\color{red} Explain in more detail why curvature is defined in the following manner: }
 \begin{definition}[Curvature of a curve] \label{definition: Curvature of a curve}
     Let \( \gamma: U \rightarrow \R^n \) be a unit-speed curve. The curvature at point \( \gamma(t) \) is defined as \[ \kappa(t) = \left\lVert \gamma^{\prime\prime} \right\rVert  \]
 \end{definition}
 
 These are all the definitions and results about curves that we need to know to understand this report.
 \subsection{Surfaces}
-Intuitively, a surface is a subset of \( \R^3 \) that looks like a \( \R^2 \)  in the neighbourhood of any given point, e.g. the surface of the Earth is spherical; however, it appear to be a flat plane(\( \R^2 \)) to an observer on the surface.
+Intuitively, a surface is a subset of \( \R^3 \) that looks like \( \R^2 \)  in the neighbourhood of any given point, e.g. the surface of the Earth is spherical; however, it appear to be a flat plane(\( \R^2 \)) to an observer on the surface.
 
 \begin{definition}[Diffeomorphism]
     If \( f: U \rightarrow W \) is continuous, bijective, and smooth, and if its inverse maps \( f^{-1}: W \rightarrow U\) is also continuous and smooth, then f is called a diffeomorphism, and \(U\) and \(W\) are called diffeomorphic.
 \end{definition}
 
-\begin{definition}[Regular Surface]
-    A subset of \( \R^3 \) is a regular surface, if for every point P \( \in S \), there exists a open set \( U \text{ in } \R^2\) and an open set \( W \text{ in } \R^3\) containing P such that \( S \cap W\) is diffeomorphic to \(U\).
+\begin{definition}[Smooth Surface]
+    A subset of \( \R^3 \) is a smooth surface, if for every point P \( \in S \), there exists a open set \( U \text{ in } \R^2\) and an open set \( W \text{ in } \R^3\) containing P such that there exists a function \( \sigma(u,v): U \subset \R^2 \rightarrow W \cap S \) such that \( \sigma_u \times \sigma_v \neq 0\). 
 \end{definition}
-Therefore, a surface is collection of diffeomorphisms, \( \sigma: U \rightarrow S \cap W \), which we call regular surface patches.
 
-\begin{definition}[Reparametrisation of surface patches]
+Therefore, a surface is a collection of such functions, \( \sigma: U \rightarrow S \cap W \), which we call smooth surface patches.
+
+\begin{definition}[Reparametrisation of Surface Patches]
     Let \( \sigma: U \rightarrow S\) and \( \tilde{\sigma}: \tilde{U} \rightarrow S\) be surface patches for a surface S, then \( \tilde{\sigma} \) is called a reparametrisation of \( \sigma \) if there exists a map, \( \Phi: \tilde{U} \rightarrow U \), which is smooth and bijective with smooth inverse, \( \Phi^{-1}: U \rightarrow \tilde{U} \).
 \end{definition}
 
 \begin{definition}[Tangent space]
-    Let \(S\) be a regular surface. The \textbf{tangent plane} to \(S\) at the point \( p \in S\) is the set of all initial velocity vectors of regular curves in \(S\) with initial position \(p\), i.e \[ T_pS = \{ \gamma^\prime(0) | \gamma \text{ is a regular curve in S with }\gamma(0) = p\} \]
+    Let \(S\) be a smooth surface. The \textbf{tangent plane} of \(S\) at the point \( p \in S\) is the set of all initial velocity vectors of regular curves in \(S\) with initial position \(p\), i.e \[ T_pS = \{ \gamma^\prime(0) | \gamma \text{ is a regular curve in S with }\gamma(0) = p\} \]
 \end{definition}
 
 These are all the definitions about surfaces that we need to understand this report.
 
 \section{First Fundamental Form}
-In this section, we will define one of the most important object that lets us compute lengths, angles and areas on surface. It is called the \textbf{first fundamental form}.
+In this section, we will develop on to of the definitions we discussed in the last section. We'll define one of the most essential objects that let us compute lengths, angles, and areas on a surface. It is called the \textbf{first fundamental form}.
 
-\begin{definition}[The fundamental form]
+\begin{definition}[Fist Fundamental Form]
     The \textbf{first fundamental form} is the restriction of the inner product of the ambient space(\(\R^3\)) to the tangent space(\( T_pS\)) at point \( p \in S\). The first fundamental form is denoted by \( \mathbf{I} \), \[ \mathbf{I}(x,y) = \left\langle x,y\right\rangle  \], where \( x,y \in T_pS\).
 \end{definition}
 
-\subsection{The first fundamental form in local coordinates} \label{ssec: The first fundamental form in local coordinates}
+\subsection{First Fundamental Form in Local Coordinates} \label{ssec: The first fundamental form in local coordinates}
 We'll now discuss the classical notation for expres\text{sin}g the first fundamental form in local coordinates. Suppose \( \sigma(u,v): U \rightarrow S\) is a surface patch and \( x,y \in T_pS \), where \(T_pS\) is the tangent plane at point \(p\) on \(S\). Let \( \sigma(u_0, v_0) = p \) and \( f_u = \sigma_u \mid_{u_0} \) and \( f_u = \sigma_v \mid_{v_0} \). Then, we can write \(x =  f_u a + f_v b\) and \( y =  f_u c + f_v d\). This implies the following:
 \begin{align}
     \begin{split}
@@ -158,7 +157,7 @@ where
     f_v \right\rVert ^2
 \end{align}
 
-\begin{definition}[the first fundamental form]
+\begin{definition}[First Fundamental Form in Local Coordinates]
     The first fundamental form in local coordinates(\(u,v\)) is the expression \(\mathcal{F}_1 =  E du^2 + 2F du dv + G dv^2 \).
 \end{definition}
 
@@ -266,7 +265,7 @@ In this section, we will learn about the Gauss map, the intuition behind the sec
     The \textbf{Gauss Map} on a surface \(S\) is just a smooth map defined on the surface \(S\) to \(S^2\), i.e. \( N: S \rightarrow S^2 \), where \( S^2\) is the contour of a unit sphere.
 \end{definition}
 In other words, the Gauss map is just a unit normal vector field N, where we imagine the output vectors drawn from the origin.\\
-For \( p \in S\), consider the derivative \(dN_p: T_pS \rightarrow T_{N(p)}S \). We notice that the domain and codomain of the derivative are the same subspace of \( \R^3\) because \(N(p)\) is normal to the surface \(S\) and \(S^2\). To make the notation easier to understand we'll denote \(N \circ \sigma\) as \(N\), whenever this does not cause confusion.
+For \( p \in S\), consider the derivative \(dN_p: T_pS \rightarrow T_{N(p)}S \). We notice that the domain and codomain of the derivative are the same subspace of \( \R^3\) because \(N(p)\) is normal to the surface \(S\) and \(S^2\); therefore, \(dN_p: T_pS \rightarrow T_pS  \). To make the notation easier to understand we'll denote \(N \circ \sigma\) as \(N\), whenever this does not cause confusion.
 
 \begin{definition}[Orientabile]
     A surface is called orientable if we can make a consistent choice of surface normal vector at every point on the surface. In other words, if we can define a Gauss map on the entire surface then it is orientable.
@@ -280,17 +279,17 @@ For \( p \in S\), consider the derivative \(dN_p: T_pS \rightarrow T_{N(p)}S \).
 \end{definition}
 The negative sign in the definition of Weingarten map may seen weird at first; however, it will become clear when we talk about the normal curvature. It can be shown that the Weingarten map can be represent as a diagonal matrix with a change in basis; however, we will not prove this here.
 
-Their is an ambiguity in the unit normal map as their are two possible choices. To make it unambiguous we usually take the unit normal at point \(p \in S\) to be \( N(p) = \sigma_u \times \sigma_v\) for a surface patch \( \sigma \).
+There is an ambiguity in the unit normal map as their are two possible choices. To make it unambiguous we usually take the unit normal at point \(p \in S\) to be \( N(p) = \frac{\sigma_u \times \sigma_v}{\left\lVert \sigma_u \times \sigma_v\right\rVert } \) for a surface patch \( \sigma \).
 
 \subsection{Normal and Geodesic Curvature}
-We'll now discuss about the normal curvature. Intuitively, it measures of how quickly the surface is bending away from the the tangent plane at a point on the surface in a given direction. Mathematical, we define it as follows:
+We'll now discuss about the Normal and Geodesic curvature. Intuitively, Normal curvature measures how quickly the surface is bending away from the the tangent plane at a point on the surface in a given direction. Mathematical, we define it as follows:
 
 \begin{definition}[Normal Curvature]
     Let \(S\) be an orientable surface, \( p \in S\). Suppose \( \gamma: X \subset \R^2 \rightarrow S\) is a unit speed curve, \( \gamma(0) = p\) and \(\gamma^{\prime}(0) = v\). Then, the normal curvature \(( \kappa_n) = \left\langle y^{\prime \prime}(0), N(p)\right\rangle \).
 \end{definition}
 
 We can intuitively see that \(\kappa_n\) measures how fast a curve is curving at point \(p\) away from the tangent plane \(T_pS\), see figure \ref{fig:normal_and_geodesic_curvature}.
-It turns out that there is another equivalent definition of the normal curvature. It can be seen by the following calculation:
+It turns out that there is another equivalent definition of the Normal curvature. It can be seen by the following calculation:
 \begin{align} \label{eq: relating two interpretaion of the normal curvature}
     \begin{split}
         & 0 = \left\langle \gamma^{\prime}(t) , N(\gamma(t)) \right\rangle \\
@@ -302,12 +301,11 @@ It turns out that there is another equivalent definition of the normal curvature
 \end{align}
 
 Due to the above result, we define the Weingarten map the way we did (it also reduces a lot of negative signs in certain cases when we do calculations). \\
-
-Now, we will discuss about the \textbf{Geodesic curvature}. Intuitively, It measures how quickly the surface is bending away from the plane \( \widetilde{T_pS}\) at point \(p\), where \( \widetilde{T_pS}\) = p + \text{span}\{ v, N(p)\}. To see this, we decompose the the acceleration, i.e. the second derivative, of \( \gamma\) as follows:
+Now, we will discuss about the \textbf{Geodesic curvature}. Intuitively, It measures how quickly a surface is bending away from the plane \( \widetilde{T_pS}\) at point \(p\), where \( \widetilde{T_pS}\) = p + \text{span}\{ v, N(p)\}. To see this, we decompose the the acceleration, i.e. the second derivative, of \( \gamma\) as follows:
 \begin{align*}
     a = \kappa_n \cdot N(p) + \kappa_g \cdot R_{90}(v)
 \end{align*}
-for some \(k_g \in \R\), which we call this the geodesic curvature of \( \gamma\) at \(p\), see figure \ref{fig:normal_and_geodesic_curvature}. Here, \( R_{90}: T_pS \rightarrow T_pS \) denotes the rotation of 90 degrees in the tangent plane in the anticlockwise direction with respect to the orientation of the surface. \\
+for some \(k_g \in \R\), which we call this the Geodesic curvature of \( \gamma\) at \(p\), see figure \ref{fig:normal_and_geodesic_curvature}. Here, \( R_{90}: T_pS \rightarrow T_pS \) denotes the rotation of 90 degrees of the tangent plane in the anticlockwise direction with respect to the orientation of the surface. \\
 \begin{figure}[h]
     \centering
     \includegraphics[width=12cm]{./images/normal_and_geodesic_curvature}
@@ -316,14 +314,14 @@ for some \(k_g \in \R\), which we call this the geodesic curvature of \( \gamma\
 \end{figure}
 
 \begin{definition}[Second Fundamental Form]
-    The quadratic form associated with the Weingarten map is called the second fundamental form of \(S\) at \(p\),   and is denoted by the \(\mathbf{II}_p\), i.e.
+    The quadratic form associated with the Weingarten map is called the Second Fundamental Form of \(S\) at \(p\),   and is denoted by the \(\mathbf{II}_p\), i.e.
     \begin{align*}
         \mathbf{II}_p = \left\langle W_p(v), v\right\rangle = \left\langle -dN_p(v), v \right\rangle
     \end{align*}
 \end{definition}
 
 \subsection{The Second Fundamental Form in Local Coordinates}
-We'll now talk about the second fundamental form in local coordinates as we did with the first fundamental form. Let \( \sigma: U \subset \R^2 \rightarrow S\) be a regular surface patch of S, where \(S\) is a smooth surface, then we define the functions L, M , and N as follows:
+We'll now talk about the Second Fundamental Form in local coordinates as we did with the First Fundamental Form. Let \( \sigma: U \subset \R^2 \rightarrow S\) be a regular surface patch of S, where \(S\) is a smooth surface, then we define the functions L, M , and N as follows:
 \begin{align} \label{eq: define second fundamental form in local coordinates}
     \begin{split}
         L & = \left\langle \sigma_{uu}, N\right\rangle = \left\langle N_u, \sigma_u\right\rangle = { \color{red}\left\langle W(\sigma_u), \sigma_u\right\rangle} \\
@@ -332,12 +330,12 @@ We'll now talk about the second fundamental form in local coordinates as we did 
     \end{split}
 \end{align}
 
-These equations are generated u\text{sin}g a similar method to what we did in equation \ref{eq: relating two interpretaion of the normal curvature}. Note that we have suppressed the input variables for brevity. For example, the red term really means that \( L(q) = \left\langle W_{p}(\sigma_u(q)), \sigma_u(q)\right\rangle \), where \(p = \sigma(q)\) and \(q \in U \subset \R^2\). Furthermore, we can represent the second fundamental form in terms of \(E, F, \text{ and } G\) as follows:\\
+These equations are generated u\text{sin}g a similar method to what we did in equation \ref{eq: relating two interpretaion of the normal curvature}. Note that we have suppressed the input variables for brevity. For example, the red term really means that \( L(q) = \left\langle W_{p}(\sigma_u(q)), \sigma_u(q)\right\rangle \), where \(p = \sigma(q)\) and \(q \in U \subset \R^2\). Furthermore, we can represent the Second Fundamental Form in terms of \(L, M, \text{ and } N\) as follows:\\
 Suppose \( v \in T_pS\) and \( p \in S\) then,
 \begin{align*}
     \mathbf{II}_p(v) & = \mathbf{II}_p(a\sigma_u + b\sigma) = \left\langle W_p(a\sigma_u + b\sigma), a\sigma_u + b\sigma \right\rangle                                                        \\
                      & = a^2 \left\langle W_p(\sigma_u), \sigma_u\right\rangle + 2ab\left\langle W_p(\sigma_u), \sigma_v\right\rangle + b^2\left\langle W_p(\sigma_v), \sigma_v \right\rangle \\
-                     & = a^2 E + 2ab F + b^2 G
+                     & = a^2 L + 2ab M + b^2 N
 \end{align*}
 
 This relation motivates the following definition.
@@ -345,7 +343,7 @@ This relation motivates the following definition.
     The second fundamental form in local coordinates \{u,v\} is the expression \[ \mathcal{F}_2 = L du^2 + 2M dudv + N dv^2\]
 \end{definition}
 
-As we did in the section \ref{ssec: The first fundamental form in local coordinates} (the first fundamental form in local coordinates), again a good question to ask would be, how reparametrisation of a surface affects the second fundamental form of the surface in terms of the local coordinates?
+As we did in the section \ref{ssec: The first fundamental form in local coordinates} , again a good question to ask would be, how reparametrisation of a surface affects the Second Fundamental Form of a Surface in terms of the local coordinates?
 
 \begin{example}
     Let a surface patch \( \tilde{\sigma}(\tilde{u}, \tilde{v})\) be a reparametrisation of a surface patch \(\sigma(u,v)\). Assume that \(\Phi: U \rightarrow \tilde{U}\) is a smooth reparametrisation map, then
@@ -379,14 +377,14 @@ As we did in the section \ref{ssec: The first fundamental form in local coordina
 % The normal and geodesic curvature are extrinsic porosities. This means that we can't represent them u\text{sin}g only the first fundamental form.
 
 \section{Gaussian Curvature}
-In this section, we'll define two more quantities that measures the curvature of a surface, namely the Gaussian Curvature and Mean Curvature. Gaussian and Mean curvature are dependent on the the following definition:
+In this section, we'll define two more quantities that measures the curvature of a surface, namely the Gaussian and Mean curvature. Gaussian and Mean curvature are dependent on the the following definition:
 
-\begin{definition}[Perincipal Curvature]
-    The principal curvature of a surface \( S\) at point \(p\) are the maximum curvature \(\kappa_1\) and minimum curvature \( \kappa_2 \). The directions in which these max \(\kappa_1\) and min curvature \(\kappa_2\) occur are called the principal direction. \\
+\begin{definition}[Perincipal Curvatures]
+    The principal curvatures of a surface \( S\) at point \(p\) are the maximum (\(\kappa_1\)) and minimum (\( \kappa_2 \)) curvature. The directions in which these max \(\kappa_1\) and min \(\kappa_2\) curvature occur are called the principal directions. \\
     Alternatively, the max and min curvature are the eigen values of the Weingarten map \( W_p\) at point \(p \in S\) and the principal direction associated with them are the eigen vectors.
 \end{definition}
 
-From the above definition, we can see that we can represent the Weingarten map as a diagonal matrix with a change of basis. Suppose \(v \in T_pS\), where \(|v| = 1\), and let be orthonormal basis be  \( e_1 \) and \( e_2 \) of \( T_pS\). Then, we can represent in \(v\) terms of the basis vectors, i.e. \( v = e_1 \text{cos}(\theta) + e_2 \text{sin}(\theta)\), where \( \theta \) is the angle between \( v\) and \( e_1\).
+From the above definition, we can see that we can represent the Weingarten map as a diagonal matrix with a change of basis. Suppose \(v \in T_pS\), where \(|v| = 1\), and let \{ \(e_1, e_2\) \} be an  orthonormal basis of \( T_pS\). Then, we can represent \(v\) in terms of the basis vectors, i.e. \( v = e_1 \text{cos}(\theta) + e_2 \text{sin}(\theta)\), where \( \theta \) is the angle between \( v\) and \( e_1\).
 \begin{align*}
     \mathbf{II}_p(v) & = \left\langle W_p(v), v\right\rangle                                                                              \\
                      & = \left\langle W_p(e_1 \text{cos}(\theta) + e_2 \text{sin}(\theta)), e_1 \text{cos}(\theta) + e_2 \text{sin}(\theta) \right\rangle             \\
@@ -417,7 +415,7 @@ Now, we will define Gaussian curvature with respect to the local coordinates u\t
         w_{11} & w_{21} \\
         w_{21} & w_{22} 
     \end{pmatrix}\)
-    be the matrix that represent the Weingarten map ( \(W_p\) ) at point \( p \in S\) with represent to the basis vectors \{\( \sigma_u, \sigma_v \)\} of \( T_pS \), where \( \sigma: U \rightarrow S\) is a surface patch. Then, 
+    be the matrix that represent the Weingarten map ( \(W_p\) ) at point \( p \in S\) with respect to the basis vectors \{\( \sigma_u, \sigma_v \)\} of \( T_pS \), where \( \sigma: U \rightarrow S\) is a surface patch. Then, 
     \begin{align} \label{eq: Weingarten map local coordinates}
         \begin{pmatrix}
             w_{11} & w_{21} \\
@@ -452,7 +450,7 @@ If we represent these equations in a matrix format we get the following:
         M & N 
     \end{pmatrix}
 \end{align*}
-It is easy to check that we calculate the inverse then we will get equation \ref{eq: Weingarten map local coordinates}. \\
+It is easy to check that if we calculate the inverse then we will get equation \ref{eq: Weingarten map local coordinates}. \\
 
 From this we can get a formula for the Gaussian and Mean curvature in terms the local coordinates. They are as follows:
 \begin{align*}
@@ -590,11 +588,5 @@ From the above example, we can tell that we only need to consider 3 cases, when 
         \sigma(u,v) = \left(\text{cos}(v) ( a \; \text{sin}(u) + b \; \text{cos}(u) ) , \text{sin}(v) ( a \; \text{sin}(u) + b \; \text{cos}(u)) , \pm \int \sqrt{1 - (a \; \text{cos}(u) - b \; \text{sin}(u))^2  }  \right)
     \end{align*}
 \end{example}
-
-    {\color{red}
-        - Example \checkmark \\
-        - Gaussian Curvature , Give the formula show what gaussian curves is equal to w.r.t. the first and second fundamental form. \checkmark\\
-        - Example that Pedram asked \checkmark \\
-        - Gauss Bonnet Theorem \ding{55}}
-        \end{document}
+\end{document}
 
